@@ -2,7 +2,6 @@
 import React from "react";
 import { Typography, IconButton, Container } from "@mui/material";
 import { Box } from "@mui/system";
-import { grey } from "@mui/material/colors";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Carrousel from "./Carrousel";
 

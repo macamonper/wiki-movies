@@ -1,6 +1,6 @@
 import React from "react";
 import { Paper } from "@mui/material";
-import CardContainer from "./CardContainer";
+import CardContainer from "../card/CardContainer";
 
 const Home = () => {
     return (
@@ -8,9 +8,8 @@ const Home = () => {
         <Paper variant="outlined" square sx={{ backgroundColor: "#061C1F",pb:6 }}>
             
         <CardContainer/>
-            <CardContainer />
-            
-            
+        <CardContainer />
+             
         </Paper>
 
     );
