@@ -4,14 +4,14 @@ import CardContainer from "../card/CardContainer";
 
 const Home = () => {
     return (
-        
-        <Paper variant="outlined" square sx={{ backgroundColor: "#061C1F",pb:6 }}>
-            
-        <CardContainer/>
+      <Paper
+        variant="outlined"
+        square
+        sx={{ backgroundColor: "#131315", pb: 6 }}
+      >
         <CardContainer />
-             
-        </Paper>
-
+        <CardContainer />
+      </Paper>
     );
 }
 

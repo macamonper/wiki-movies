@@ -17,7 +17,7 @@ const CardContainer = () => {
             justifyContent: "space-between",
           }}
         >
-          <Typography variant="h1" fontSize={25} mt={5} color="common.white" sx={{
+          <Typography variant="h1" fontSize={30} mt={5} color="common.white" sx={{
             lineHeight:1.5
           }} >
             Trending movies

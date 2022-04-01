@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { A11y, Autoplay, FreeMode, Keyboard, Pagination } from "swiper";
+import { A11y, Autoplay, FreeMode,Pagination } from "swiper";
 import InfoCard from "./InfoCard";
  
 const Carrousel = () => {

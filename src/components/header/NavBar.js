@@ -5,26 +5,30 @@ import CottageIcon from "@mui/icons-material/Cottage";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import TvIcon from "@mui/icons-material/Tv";
 import SearchBar from "./SearchBar";
+import Home from "../home/Home";
+import Series from "../movies&series/Series";
+import Movies from "../movies&series/Movies";
+
+
 
 const NavBar = () => {
     return (
       <Box>
-        
         <AppBar
           position="sticky"
-          sx={{ backgroundColor: "#023A40", color: "#FFFFF" }}
+          sx={{ backgroundColor: "#A30029", color: "#FFFFF" }}
         >
           <Toolbar>
             <IconButton
               component={Link}
-              to="../home/Home"
+              to="/"
               color="inherit"
               aria-label="home"
               size="large"
               sx={{
                 ":hover": {
                   bgcolor: "#FFFFFF",
-                  color: "#023A40",
+                  color: "#8F0024",
                 },
               }}
             >
@@ -32,14 +36,14 @@ const NavBar = () => {
             </IconButton>
             <IconButton
               component={Link}
-              to="../trending/TrendingMovies"
+              to="/movies"
               color="inherit"
               aria-label="home"
               size="large"
               sx={{
                 ":hover": {
                   bgcolor: "#FFFFFF",
-                  color: "#023A40",
+                  color: "#8F0024",
                 },
               }}
             >
@@ -47,14 +51,14 @@ const NavBar = () => {
             </IconButton>
             <IconButton
               component={Link}
-              to="../trending/TrendingSeries"
+              to="/series"
               color="inherit"
               aria-label="home"
               size="large"
               sx={{
                 ":hover": {
                   bgcolor: "#FFFFFF",
-                  color: "#023A40",
+                  color: "#8F0024",
                 },
               }}
             >

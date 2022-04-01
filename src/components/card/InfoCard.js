@@ -11,7 +11,7 @@ const InfoCard = () => {
       sx={{
         borderRadius: 0,
         boxShadow: 0,
-        color: "#FFFFFF"
+        color: "#FFFFFF",
       }}
     >
       <CardActionArea>
@@ -22,19 +22,19 @@ const InfoCard = () => {
         />
         <CardContent
           sx={{
-            backgroundColor: "#061C1F",
+            backgroundColor: "#131315",
             textAlign: "left",
-            pl:"0"
+            pl: "0",
           }}
         >
           <Typography
             gutterBottom
             variant="h5"
             component="div"
-            color={"common.white"}
+            color={"#EEF1EF"}
             sx={{
               fontSize: 18,
-              marginBottom:3
+              marginBottom: 3,
             }}
           >
             Lizard

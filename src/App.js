@@ -7,7 +7,8 @@ import Home from "./components/home/Home";
 import Movies from "./components/movies&series/Movies";
 import Series from "./components/movies&series/Series";
 import Footer from "./components/footer/Footer";
-import { InsertDriveFileSharp } from "@mui/icons-material";
+import Error404 from "./components/404/Error404"
+
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
               <Route path="/" element={<Home />}></Route>
               <Route path="/movies" element={<Movies />}></Route>
               <Route path="/series" element={<Series />}></Route>
+              <Route path="/*" element = {<Error404/>}></Route>
             </Routes>
             <Footer />
           </div>

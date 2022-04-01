@@ -1,7 +1,8 @@
 import { styled, alpha } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -42,22 +43,36 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
+
 const SearchBar = () => {
+
+  const navigate = useNavigate();
+  const [searchParam, setSearchParam] = useState("");
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/multi/${searchParam}`);
+  };
+
+  const handleChange = (e) => {
+    setSearchParam(e.target.value);
+  };
+
+
     return (
-        <Box>
-   
-            <Search>
-                <SearchIconWrapper>
-                    <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                    placeholder="Search for a movie or series title..."
-                    inputProps={{ "aria-label": "search" }}
-                />
-            </Search>
-       
-        </Box>
-   
+      <form onSubmit={handleSubmit}>
+        <Search>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search a title..."
+            inputProps={{ "aria-label": "search" }}
+            onChange={handleChange}
+          />
+        </Search>
+      </form>
     );
 }
 

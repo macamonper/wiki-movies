@@ -1,7 +1,8 @@
 
 
-*{
-    font-family: 'DM Sans', sans-serif !important;
+h1{
+font-family: 'Bebas Neue', cursive !important;
+
 }
 
 .swiper-pagination-bullet{
@@ -12,22 +13,18 @@
 .swiper-wrapper{
     margin-bottom: 4px !important;
 }
-.swiper-slide-active,.swiper-slide-next,.swiper-slide{
-    border: 1 transparent !important;
-}
+
 .MuiCard-root{
     border: 1 transparent !important;
 }
 .MuiCard-root:hover{
     overflow: visible;
     opacity: none !important;
-    border: 1 transparent !important;
 }
 
 .MuiCardMedia-root:hover{
     transition: transform .2s ease-in;
     transform: scale(1.03);
-    border:1 transparent !important;
 
 
 }
