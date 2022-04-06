@@ -1,7 +1,8 @@
 
+h1,h3{
+    font-family: 'Bebas Neue', cursive !important;
+        color: #BD1E1E !important;
 
-*{
-    font-family: 'DM Sans', sans-serif !important;
 }
 
 .swiper-pagination-bullet{
@@ -31,3 +32,8 @@
 
 
 }
+.css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root{
+    border:transparent !important
+}
+
+

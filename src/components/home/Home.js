@@ -1,19 +1,21 @@
-import React from "react";
 import { Paper } from "@mui/material";
-import CardContainer from "./CardContainer";
+import CardContainer from "../carrouselCard/CardContainer";
+
 
 const Home = () => {
-    return (
-        
-        <Paper variant="outlined" square sx={{ backgroundColor: "#061C1F",pb:6 }}>
-            
-        <CardContainer/>
-            <CardContainer />
-            
-            
-        </Paper>
 
-    );
+  return (
+    <Paper variant="outlined" square sx={{ backgroundColor: "#131315", pb: 6 }}>
+       <CardContainer
+        title="Trending movies" media="movie"
+          
+        
+      /> 
+      <CardContainer 
+        title="Trending series" media="tv"
+      />
+    </Paper>
+  );
 }
 
 export default Home;

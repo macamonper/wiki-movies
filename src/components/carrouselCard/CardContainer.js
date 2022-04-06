@@ -1,12 +1,9 @@
-
-import React from "react";
 import { Typography, IconButton, Container } from "@mui/material";
 import { Box } from "@mui/system";
-import { grey } from "@mui/material/colors";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Carrousel from "./Carrousel";
 
-const CardContainer = () => {
+const CardContainer = ({ title, media}) => {
   
     return (
       <Container maxWidth="xl">
@@ -18,10 +15,15 @@ const CardContainer = () => {
             justifyContent: "space-between",
           }}
         >
-          <Typography variant="h1" fontSize={25} mt={5} color="common.white" sx={{
-            lineHeight:1.5
-          }} >
-            Trending movies
+          <Typography
+            variant="h1"
+            fontSize={30}
+            mt={5}
+            sx={{
+              lineHeight: 1.5,
+            }}
+          >
+            {title}
           </Typography>
 
           <IconButton
@@ -29,15 +31,16 @@ const CardContainer = () => {
               color: "#FFFFFF",
               ":hover": {
                 bgcolor: "#3F4445",
-                color: "#fffff",
-              }
-            }}>
-            <ArrowForwardIcon/>
+                color: "#BD1E1E",
+              },
+            }}
+          >
+            <ArrowForwardIcon />
           </IconButton>
         </Box>
 
         <Box sx={{ mt: 3, mb: 1.5 }}>
-          <Carrousel />
+          <Carrousel media={media}></Carrousel>
         </Box>
       </Container>
     );
