@@ -6,6 +6,9 @@ import NavBar from "./components/header/NavBar";
 import Home from "./components/home/Home";
 import Movies from "./components/movies&series/Movies";
 import Series from "./components/movies&series/Series"
+import DetailedInfoTv from "./components/info/DetailedInfoTv"
+import DetailedInfoMovie from "./components/info/DetailedInfoMovie";
+
 import Error404 from "./components/404/Error404";
 import Footer from "./components/footer/Footer";
 
@@ -14,18 +17,19 @@ const App = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-       <BrowserRouter>
-     
-            <NavBar />
-              <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/movies" element={<Movies />}/>
-                <Route path="/series" element={<Series />}/>
-                <Route path="/*" element={<Error404 />}/>
-              </Routes>
-              <Footer />
-       
-        </BrowserRouter>
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/series" element={<Series />} />
+          <Route path="/detailedInfoTv" element={<DetailedInfoTv />} />
+          <Route path="/detailedInfoMovie" element={<DetailedInfoMovie/>} />
+
+          <Route path="/*" element={<Error404 />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </React.Fragment>
   );
 }

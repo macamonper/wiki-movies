@@ -1,8 +1,6 @@
-
 h1,h3{
     font-family: 'Bebas Neue', cursive !important;
-        color: #BD1E1E !important;
-
+    color: #BD1E1E !important;
 }
 
 .swiper-pagination-bullet{
@@ -14,26 +12,28 @@ h1,h3{
     margin-bottom: 4px !important;
 }
 .swiper-slide-active,.swiper-slide-next,.swiper-slide{
-    border: 1 transparent !important;
+    border:none !important;
 }
 .MuiCard-root{
-    border: 1 transparent !important;
+    border: none !important;
 }
 .MuiCard-root:hover{
     overflow: visible;
     opacity: none !important;
-    border: 1 transparent !important;
+    border: none !important;
+}
+.MuiCardContent-root{
+    opacity: none !important;
+    border: none !important;
 }
 
-.MuiCardMedia-root:hover{
+.carrouselCard:hover{
     transition: transform .2s ease-in;
     transform: scale(1.03);
-    border:1 transparent !important;
+    border:none !important;
 
 
 }
 .css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root{
-    border:transparent !important
+    border:none!important
 }
-
-

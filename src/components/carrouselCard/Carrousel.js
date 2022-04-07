@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
-import InfoCard from "./InfoCard";
+import CarrouselCard from "./CarrouselCard";
 
 
 const Carrousel = ({media }) => {
@@ -38,7 +38,7 @@ const content = useFetchMedia(media)
       >
         {content.slice(0,10).map((media) => (
           <SwiperSlide key={media.id}>
-            <InfoCard
+            <CarrouselCard
               id={media.id}
               title={media.title}
               name={media.name}

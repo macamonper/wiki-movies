@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
-import InfoCard from "../carrouselCard/InfoCard";
+import CarrouselCard from "../carrouselCard/CarrouselCard";
 import useFetchCategory from '../../hooks/useFetchCategory';
 
 
@@ -38,7 +38,7 @@ const CategoryCarrousel = ({media,type}) => {
       >
         {categoryContent.slice(0,10).map((media) => (
           <SwiperSlide key={media.id}>
-            <InfoCard              id={media.id}
+            <CarrouselCard id={media.id}
               title={media.title}
               name={media.name}
               src={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
