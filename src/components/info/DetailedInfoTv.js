@@ -6,8 +6,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import ToolBar from "./Toolbar";
 import { tvInfoMenu } from "../../auxiliars/variables";
+import{useParams} from "react-router-dom"
 
 const DetailedInfoTv = () => {
+  console.log("tv");
+
+  const params = useParams()
+  console.log(params.id)
+  console.log(params.type)
+  
   return (
     <Card>
       <CardMedia

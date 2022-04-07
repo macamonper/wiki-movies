@@ -5,11 +5,13 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const CarrouselCard = ({ id, title, src ,name}) => {
+const CarrouselCard = ({ type, id, title, src, name }) => {
+  console.log(type)
 
   return (
-    <Link to="/contentInfo" style={{ textDecoration: "none" }}>
-      <Card className="carrouselCard"
+    <Link to={`/${type}/${id}/info`} style={{ textDecoration: "none" }}>
+      <Card
+        className="carrouselCard"
         sx={{
           borderRadius: 0,
           boxShadow: 0,

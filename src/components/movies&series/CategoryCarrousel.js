@@ -7,9 +7,9 @@ import CarrouselCard from "../carrouselCard/CarrouselCard";
 import useFetchCategory from '../../hooks/useFetchCategory';
 
 
-const CategoryCarrousel = ({media,type}) => {
+const CategoryCarrousel = ({type,categoryContent}) => {
   
-    const categoryContent = useFetchCategory(media, type)
+    const categories = useFetchCategory(type,categoryContent);
   
   return (
     <div>
@@ -36,7 +36,7 @@ const CategoryCarrousel = ({media,type}) => {
         modules={[FreeMode, Autoplay, Pagination, A11y,Keyboard]}
         className="mySwiper"
       >
-        {categoryContent.slice(0,10).map((media) => (
+        {categories.slice(0,10).map((media) => (
           <SwiperSlide key={media.id}>
             <CarrouselCard id={media.id}
               title={media.title}

@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CategoryCarrousel from "./CategoryCarrousel";
 
 
-const CategoryContainer = ({ title, media,type}) => {
+const CategoryContainer = ({ title,type,category}) => {
   return (
     <Container maxWidth="xl">
       <Box
@@ -42,7 +42,7 @@ const CategoryContainer = ({ title, media,type}) => {
       </Box>
 
       <Box sx={{ mt: 3, mb: 1.5 }}>
-        <CategoryCarrousel media={media} type={type}></CategoryCarrousel>
+        <CategoryCarrousel type={type} categoryContent={category}></CategoryCarrousel>
       </Box>
     </Container>
   );

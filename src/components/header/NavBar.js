@@ -45,7 +45,7 @@ const NavBar = () => {
             </IconButton>
             <IconButton
               component={Link}
-              to="/series"
+              to="/tv"
               color="inherit"
               aria-label="home"
               size="large"

@@ -12,7 +12,7 @@ import { movieInfoMenu } from "../../auxiliars/variables";
 
 
 const DetailedInfoMovie = () => {
-
+console.log("pelicula")
   return (
     <Card>
       <CardMedia

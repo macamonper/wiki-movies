@@ -1,15 +1,15 @@
-import useFetchMedia  from '../../hooks/useFetchMedia';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "./CarrouselCard";
+import useFetchType from '../../hooks/useFetchMedia';
 
 
-const Carrousel = ({media }) => {
-  
-const content = useFetchMedia(media)
+const Carrousel = ({type}) => {
+  console.log(type)
+const content = useFetchType(type)
   
   return (
     <div>
@@ -36,17 +36,21 @@ const content = useFetchMedia(media)
         modules={[FreeMode, Autoplay, Pagination, A11y,Keyboard]}
         className="mySwiper"
       >
-        {content.slice(0,10).map((media) => (
+        {content.slice(0, 10).map((media) => (
+
           <SwiperSlide key={media.id}>
             <CarrouselCard
-              id={media.id}
               title={media.title}
               name={media.name}
               src={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
+              id={media.id}
+              type={type}
+
+
             />
           </SwiperSlide>
-        ))}
-      </Swiper>
+         ))}
+          </Swiper>
     </div>
   );
 }

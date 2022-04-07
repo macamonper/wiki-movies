@@ -11,23 +11,23 @@ const Movies = () => {
       >
         <CategoryContainer
           title="Popular movies"
-          media="movie"
-          type="popular"
+          type="movie"
+          category="popular"
         />
         <CategoryContainer
           title="Top rated movies "
-          media="movie"
-          type="top_rated"
+          type="movie"
+          category="top_rated"
         />
         <CategoryContainer
           title="Upcoming movies"
-          media="movie"
-          type="upcoming"
+          type="movie"
+          category="upcoming"
         />
         <CategoryContainer
           title="Now playing"
-          media="movie"
-          type="now_playing"
+          type="movie"
+          category="now_playing"
         />
       </Paper>
     );

@@ -6,14 +6,8 @@ const Home = () => {
 
   return (
     <Paper variant="outlined" square sx={{ backgroundColor: "#131315", pb: 6 }}>
-       <CardContainer
-        title="Trending movies" media="movie"
-          
-        
-      /> 
-      <CardContainer 
-        title="Trending series" media="tv"
-      />
+      <CardContainer title="Trending movies" type="movies"/>
+      <CardContainer title="Trending series" type="tv" />
     </Paper>
   );
 }

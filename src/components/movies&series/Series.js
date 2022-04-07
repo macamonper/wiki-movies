@@ -10,19 +10,19 @@ const Series = () => {
       >
         <CategoryContainer
           title="Popular series"
-          media="tv"
-          type="popular"
+          type="tv"
+          category="popular"
         />
         <CategoryContainer
           title="Top rated series "
-          media="tv"
-          type="top_rated"
+          type="tv"
+          category="top_rated"
         />
    
         <CategoryContainer
           title="Now playing"
-          media="tv"
-          type="on_the_air"
+          type="tv"
+          category="on_the_air"
         />
       </Paper>
     );

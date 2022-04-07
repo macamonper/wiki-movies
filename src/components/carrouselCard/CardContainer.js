@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Carrousel from "./Carrousel";
 
-const CardContainer = ({ title, media}) => {
+const CardContainer = ({ title, type}) => {
   
     return (
       <Container maxWidth="xl">
@@ -40,7 +40,7 @@ const CardContainer = ({ title, media}) => {
         </Box>
 
         <Box sx={{ mt: 3, mb: 1.5 }}>
-          <Carrousel media={media}></Carrousel>
+          <Carrousel type={type}></Carrousel>
         </Box>
       </Container>
     );
