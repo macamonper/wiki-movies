@@ -4,11 +4,10 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "./CarrouselCard";
-import useFetchType from '../../hooks/useFetchMedia';
+import useFetchType from '../../hooks/useFetchType';
 
 
 const Carrousel = ({type}) => {
-  console.log(type)
 const content = useFetchType(type)
   
   return (

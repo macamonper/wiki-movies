@@ -1,6 +1,9 @@
-h1,h3{
+h5{
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+    
+h1,h3,h4{
     font-family: 'Bebas Neue', cursive !important;
-    color: #BD1E1E !important;
 }
 
 .swiper-pagination-bullet{
@@ -11,29 +14,13 @@ h1,h3{
 .swiper-wrapper{
     margin-bottom: 4px !important;
 }
-.swiper-slide-active,.swiper-slide-next,.swiper-slide{
-    border:none !important;
-}
-.MuiCard-root{
-    border: none !important;
-}
-.MuiCard-root:hover{
-    overflow: visible;
-    opacity: none !important;
-    border: none !important;
-}
-.MuiCardContent-root{
-    opacity: none !important;
-    border: none !important;
-}
 
 .carrouselCard:hover{
     transition: transform .2s ease-in;
     transform: scale(1.03);
-    border:none !important;
-
 
 }
-.css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root{
-    border:none!important
+
+.Star{
+color: rgba(246, 184, 28, 0.53) !important;
 }

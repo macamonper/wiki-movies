@@ -6,9 +6,7 @@ import NavBar from "./components/header/NavBar";
 import Home from "./components/home/Home";
 import Movies from "./components/movies&series/Movies";
 import Series from "./components/movies&series/Series"
-import DetailedInfoTv from "./components/info/DetailedInfoTv"
-import DetailedInfoMovie from "./components/info/DetailedInfoMovie";
-
+import DetailedInfo from "./components/info/DetailedInfo"
 import Error404 from "./components/404/Error404";
 import Footer from "./components/footer/Footer";
 
@@ -23,8 +21,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/tv" element={<Series />} />
-          <Route path=":tv/:id/info" element={<DetailedInfoTv />} />
-          <Route path=":movies/:id/info" element={<DetailedInfoMovie/>} />
+          <Route path=":type/:id/info" element={<DetailedInfo/>} />
           <Route path="/*" element={<Error404 />} />
         </Routes>
         <Footer />
