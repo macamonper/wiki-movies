@@ -1,11 +1,11 @@
 import { Toolbar } from "@mui/material";
 import ButtonTitle from "./ButtonTitle";
 
-const ToolBar = ({ titles }) => {
+const ToolBar = ({ array }) => {
     return (
       <Toolbar sx={{ justifyContent: "center" }}>
-        {titles.map((title) => (
-          <ButtonTitle key={title} title={title} />
+        {array.map((arr) => (
+          <ButtonTitle key={arr} title={arr} />
         ))}
       </Toolbar>
     );

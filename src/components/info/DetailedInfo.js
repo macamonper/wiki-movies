@@ -10,28 +10,31 @@ import Button from "@mui/material/Button";
 import ToolBar from "./Toolbar";
 import { Box } from "@mui/system";
 import Stars from "./Stars"
-import Genres from "./Genres"
 import { currencyFormat } from "../../auxiliars/functions";
+import SocialMedia from "./SocialMedia";
+import useFetchSocialMedia from "../../hooks/useFetchSocialMedia";
 
 const DetailedInfo = () => {
 
   const params = useParams()
   const info = useFetchInfo()
-console.log(info.homepage)
+  const sis= useFetchSocialMedia()
 
   return (
-    <Card>
+    <Card sx={{
+      borderRadius: "0px",
+    }}>
       <CardMedia
         component="img"
         alt={`poster of ${info.title}`}
         height="500"
         image={`https://image.tmdb.org/t/p/original/${info.backdrop_path}`}
       />
-      <CardContent sx={{ backgroundColor: "#131315" }}>
+      <CardContent sx={{ backgroundColor: "#131315"}}>
         {params.type === "tv" ? (
-          <ToolBar titles={tvInfoMenu} />
+          <ToolBar array={tvInfoMenu} />
         ) : (
-          <ToolBar titles={movieInfoMenu} />
+          <ToolBar array={movieInfoMenu} />
         )}
 
         <Container sx={{ display: "flex", alignItems: "strech", pt: 3 }}>
@@ -92,14 +95,18 @@ console.log(info.homepage)
                 Seasons: {info.number_of_season}
               </Typography>
             )}
-            )}
           </Box>
         </Container>
       </CardContent>
 
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+      <CardActions sx={{ backgroundColor: "#131315",display:"flex",flexDirection:"column",alignItems: "center"}}>
+        {info.homepage && (
+          <a href={info.homepage} target="_blank" className="homepageLink">
+            Check it out here!
+          </a>
+        )}
+
+        <SocialMedia></SocialMedia>
       </CardActions>
     </Card>
   );

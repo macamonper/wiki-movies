@@ -2,7 +2,7 @@ h5{
     font-family: 'Source Sans Pro', sans-serif !important;
 }
     
-h1,h3,h4{
+h1,h3,h4,a{
     font-family: 'Bebas Neue', cursive !important;
 }
 
@@ -23,4 +23,14 @@ h1,h3,h4{
 
 .Star{
 color: rgba(246, 184, 28, 0.53) !important;
+}
+
+.homepageLink{
+    text-decoration: none;
+    color:#BD1E1E !important;
+}
+
+.socialMediaContainer{
+    padding-left: 0px !important;
+    margin-left: 0px !important;
 }
