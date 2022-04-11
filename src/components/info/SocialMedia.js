@@ -21,6 +21,7 @@ const SocialMedia = () => {
           aria-label="visit Imdb page"
           href={`https://imdb.com/title/${socialMedia.imdb_id}`}
           target="_blank"
+          rel="noopener noreferrer"
           sx={{
             fontSize: "1.5rem",
             color: "#BD1E1E",
@@ -33,6 +34,8 @@ const SocialMedia = () => {
         <Button
           aria-label="visit Facebook page"
           href={`https://www.facebook.com/${socialMedia.facebook_id}/`}
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             fontSize: "1.5rem",
             color: "#BD1E1E",
@@ -45,6 +48,8 @@ const SocialMedia = () => {
         <Button
           aria-label="visit twitter page"
           href={`https://twitter.com/${socialMedia.twitter_id}`}
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             fontSize: "1.5rem",
             color: "#BD1E1E",
@@ -57,6 +62,8 @@ const SocialMedia = () => {
         <Button
           aria-label="visit instagram page"
           href={`https://instagram.com/${socialMedia.instagram_id}`}
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             fontSize: "1.5rem",
             color: "#BD1E1E",

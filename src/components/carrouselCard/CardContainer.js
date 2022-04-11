@@ -19,6 +19,7 @@ const CardContainer = ({ title, type}) => {
             variant="h1"
             fontSize={30}
             mt={5}
+            color="#BD1E1E"
             sx={{
               lineHeight: 1.5,
             }}

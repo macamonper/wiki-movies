@@ -6,31 +6,34 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import ToolBar from "./Toolbar";
 import { Box } from "@mui/system";
 import Stars from "./Stars"
 import { currencyFormat } from "../../auxiliars/functions";
 import SocialMedia from "./SocialMedia";
-import useFetchSocialMedia from "../../hooks/useFetchSocialMedia";
 
 const DetailedInfo = () => {
 
   const params = useParams()
   const info = useFetchInfo()
-  const sis= useFetchSocialMedia()
 
   return (
-    <Card sx={{
-      borderRadius: "0px",
-    }}>
+    <Card
+      sx={{
+        borderRadius: "0px",
+      }}
+    >
       <CardMedia
         component="img"
         alt={`poster of ${info.title}`}
         height="500"
-        image={`https://image.tmdb.org/t/p/original/${info.backdrop_path}`}
+
+        image={
+          info.poster_path &&
+          `https://image.tmdb.org/t/p/original/${info.backdrop_path}`
+        }
       />
-      <CardContent sx={{ backgroundColor: "#131315"}}>
+      <CardContent sx={{ backgroundColor: "#131315" }}>
         {params.type === "tv" ? (
           <ToolBar array={tvInfoMenu} />
         ) : (
@@ -46,7 +49,10 @@ const DetailedInfo = () => {
             <CardMedia
               component="img"
               alt={`poster of ${info.title}`}
-              image={`https://image.tmdb.org/t/p/w500/${info.poster_path}`}
+              image={
+                info.poster_path &&
+                `https://image.tmdb.org/t/p/w500/${info.poster_path}`
+              }
             />
           </Box>
 
@@ -99,7 +105,14 @@ const DetailedInfo = () => {
         </Container>
       </CardContent>
 
-      <CardActions sx={{ backgroundColor: "#131315",display:"flex",flexDirection:"column",alignItems: "center"}}>
+      <CardActions
+        sx={{
+          backgroundColor: "#131315",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         {info.homepage && (
           <a href={info.homepage} target="_blank" className="homepageLink">
             Check it out here!

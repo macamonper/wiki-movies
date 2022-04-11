@@ -42,6 +42,7 @@ const CategoryCarrousel = ({type,categoryContent}) => {
               title={media.title}
               name={media.name}
               src={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
+              type={type}
             />
           </SwiperSlide>
         ))}

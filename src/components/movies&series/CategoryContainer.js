@@ -19,7 +19,7 @@ const CategoryContainer = ({ title,type,category}) => {
           variant="h3"
           fontSize={30}
           mt={5}
-          color="common.white"
+          color="#BD1E1E "
           sx={{
             lineHeight: 1.5,
           }}
@@ -42,7 +42,10 @@ const CategoryContainer = ({ title,type,category}) => {
       </Box>
 
       <Box sx={{ mt: 3, mb: 1.5 }}>
-        <CategoryCarrousel type={type} categoryContent={category}></CategoryCarrousel>
+        <CategoryCarrousel
+          type={type}
+          categoryContent={category}
+        ></CategoryCarrousel>
       </Box>
     </Container>
   );
