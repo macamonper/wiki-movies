@@ -35,3 +35,13 @@ color: rgba(246, 184, 28, 0.53) !important;
     padding-left: 0px !important;
     margin-left: 0px !important;
 }
+
+
+.MuiPaginationItem-root{
+    color: #ffff !important;
+
+}
+
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+background-color: #BD1E1E !important;
+}

@@ -43,6 +43,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const SearchBar = () => {
+
+  
+
     return (
         <Box>
    
@@ -51,8 +54,8 @@ const SearchBar = () => {
                     <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
-                    placeholder="Search for a movie or series title..."
-                    inputProps={{ "aria-label": "search" }}
+                    placeholder="Search..."
+            inputProps={{ "aria-label": "search" }}
                 />
             </Search>
        

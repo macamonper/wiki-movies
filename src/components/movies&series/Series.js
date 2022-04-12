@@ -20,7 +20,7 @@ const Series = () => {
         />
    
         <CategoryContainer
-          title="Now playing"
+          title="On the air"
           type="tv"
           category="on_the_air"
         />

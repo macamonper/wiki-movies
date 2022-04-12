@@ -2,17 +2,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
+import { Box } from "@mui/system";
+
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
-import CarrouselCard from "../carrouselCard/CarrouselCard";
+import CarrouselCard from "../Card/CarrouselCard";
 import useFetchCategory from '../../hooks/useFetchCategory';
 
 
-const CategoryCarrousel = ({type,categoryContent}) => {
+
+
+const CategoryCarrousel = ({type,category}) => {
   
-    const categories = useFetchCategory(type,categoryContent);
+    const categories = useFetchCategory(type,category);
   
   return (
-    <div>
+    <Box>
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -47,7 +51,7 @@ const CategoryCarrousel = ({type,categoryContent}) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </Box>
   );
 }
 export default CategoryCarrousel;

@@ -2,10 +2,13 @@ import { Typography, IconButton, Container } from "@mui/material";
 import { Box } from "@mui/system";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CategoryCarrousel from "./CategoryCarrousel";
+import { Link } from "react-router-dom";
 
 
-const CategoryContainer = ({ title,type,category}) => {
+const CategoryContainer = ({ title, type, category }) => {
+
   return (
+    
     <Container maxWidth="xl">
       <Box
         sx={{
@@ -28,6 +31,8 @@ const CategoryContainer = ({ title,type,category}) => {
         </Typography>
 
         <IconButton
+          component={Link}
+          to={`/${type}/${category}`}
           aria-label="see more ${title}"
           sx={{
             color: "#FFFFFF",
@@ -44,7 +49,7 @@ const CategoryContainer = ({ title,type,category}) => {
       <Box sx={{ mt: 3, mb: 1.5 }}>
         <CategoryCarrousel
           type={type}
-          categoryContent={category}
+          category={category}
         ></CategoryCarrousel>
       </Box>
     </Container>

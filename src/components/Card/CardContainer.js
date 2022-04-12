@@ -2,8 +2,10 @@ import { Typography, IconButton, Container } from "@mui/material";
 import { Box } from "@mui/system";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Carrousel from "./Carrousel";
+import { Link } from "react-router-dom";
 
-const CardContainer = ({ title, type}) => {
+
+const CardContainer = ({ title, type,category}) => {
   
     return (
       <Container maxWidth="xl">
@@ -28,6 +30,8 @@ const CardContainer = ({ title, type}) => {
           </Typography>
 
           <IconButton
+            component={Link}
+            to={`/${type}/${category}`}
             sx={{
               color: "#FFFFFF",
               ":hover": {

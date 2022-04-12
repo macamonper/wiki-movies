@@ -7,7 +7,8 @@ import CarrouselCard from "./CarrouselCard";
 import useFetchType from '../../hooks/useFetchType';
 
 
-const Carrousel = ({type}) => {
+const Carrousel = ({ type }) => {
+  
 const content = useFetchType(type)
   
   return (
