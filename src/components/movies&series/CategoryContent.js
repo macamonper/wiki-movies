@@ -65,6 +65,9 @@ const CategoryContent = () => {
             />
           ))}
         </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Pagination count={100} showFirstButton showLastButton />
+        </Box>
       </Container>
     </Paper>
   );
