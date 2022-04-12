@@ -3,7 +3,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Box } from "@mui/system";
-
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "../Card/CarrouselCard";
 import useFetchCategory from '../../hooks/useFetchCategory';

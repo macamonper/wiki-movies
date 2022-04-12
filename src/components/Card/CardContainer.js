@@ -31,7 +31,7 @@ const CardContainer = ({ title, type,category}) => {
 
           <IconButton
             component={Link}
-            to={`/${type}/${category}`}
+            to={`/${type}/trending`}
             sx={{
               color: "#FFFFFF",
               ":hover": {

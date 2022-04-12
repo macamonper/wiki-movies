@@ -1,20 +1,13 @@
-import useFetchCategory from "../../hooks/useFetchCategory";
-import { Container, Pagination, Paper,Typography } from "@mui/material";
-import { Box} from "@mui/system";
+import useFetchTrending from "../../hooks/useFetchTrending";
+import { Container, Pagination, Paper, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import { useParams } from "react-router-dom";
-import CarrouselCard from "../Card/CarrouselCard"
-
+import CarrouselCard from "../Card/CarrouselCard";
 
 const CategoryContent = () => {
+  const params = useParams();
 
-  const params = useParams()
- console.log(params)
-  const category = useFetchCategory(params.type, params.category)
-
-  const categoryName = params.category
-
-  const fixCategoryName = categoryName.replaceAll("_", " ");
-  
+const category = useFetchTrending(params.type)  
   return (
     <Paper variant="outlined" square sx={{ backgroundColor: "#131315", pb: 6 }}>
       <Container maxWidth="xl">
@@ -27,7 +20,7 @@ const CategoryContent = () => {
               mt={5}
               color="#BD1E1E "
             >
-              {fixCategoryName} series
+              Trending series
             </Typography>
           ) : (
             <Typography
@@ -37,7 +30,7 @@ const CategoryContent = () => {
               mt={5}
               color="#BD1E1E "
             >
-              {fixCategoryName} movies
+              Trending movies
             </Typography>
           )}
         </Box>
@@ -59,7 +52,8 @@ const CategoryContent = () => {
               src={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
               type={params.type}
             />
-          ))}
+          ))} 
+
         </Box>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Pagination count={100} showFirstButton showLastButton />
@@ -67,8 +61,6 @@ const CategoryContent = () => {
       </Container>
     </Paper>
   );
-}
-    
-
+};
 
 export default CategoryContent;

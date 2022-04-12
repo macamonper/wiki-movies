@@ -7,7 +7,7 @@ const useFetchCategory = (type, categoryContent) => {
   const [category, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch(`${urlBase}/${type}/${categoryContent}?api_key=${apiKey}&language=en-US`)
+    fetch(`${urlBase}/${type}/${categoryContent}?api_key=${apiKey}&language=en-US&page=1`)
       .then((res) => res.json())
       .then((data) => setCategories(data.results));
   }, [categoryContent]);
