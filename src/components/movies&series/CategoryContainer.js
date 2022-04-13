@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const CategoryContainer = ({ title, type, category }) => {
+  
 
   return (
     

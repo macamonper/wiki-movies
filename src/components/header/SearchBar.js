@@ -2,6 +2,8 @@ import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from "@mui/icons-material/Search";
+import variables from "../../auxiliars/variables"
+import { useParams } from 'react-router-dom';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -43,9 +45,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const SearchBar = () => {
-
-  
-
+// https://api.themoviedb.org/3/search/multi?query=hulk&api_key=072c30867a664bf27951890a08db787c&language=en-US&page=1&include_adult=false
     return (
         <Box>
    

@@ -4,16 +4,16 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "./CarrouselCard";
+import { useState } from "react";
 import useFetchTrending from '../../hooks/useFetchTrending';
 
-
-
 const Carrousel = ({ type }) => {
-  
-const content = useFetchTrending(type)
+  const [page, setPage] = useState(1);
+  const content = useFetchTrending(type,page);
   
   return (
     <div>
+   
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -37,7 +37,7 @@ const content = useFetchTrending(type)
         modules={[FreeMode, Autoplay, Pagination, A11y, Keyboard]}
         className="mySwiper"
       >
-        {content.slice(0, 10).map((media) => (
+   {content.content.slice(0, 10).map((media) => (
           <SwiperSlide key={media.id}>
             <CarrouselCard
               title={media.title}

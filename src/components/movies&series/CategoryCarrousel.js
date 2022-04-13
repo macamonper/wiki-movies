@@ -1,3 +1,5 @@
+import { useState } from "react";
+import useFetchCategory from '../../hooks/useFetchCategory';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -5,14 +7,15 @@ import "swiper/css/pagination";
 import { Box } from "@mui/system";
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "../Card/CarrouselCard";
-import useFetchCategory from '../../hooks/useFetchCategory';
 
 
 
 
-const CategoryCarrousel = ({type,category}) => {
+const CategoryCarrousel = ({ type, category }) => {
   
-    const categories = useFetchCategory(type,category);
+  const [page, setPage] = useState(1);
+  
+  const content = useFetchCategory(type, category,page);
   
   return (
     <Box>
@@ -39,7 +42,7 @@ const CategoryCarrousel = ({type,category}) => {
         modules={[FreeMode, Autoplay, Pagination, A11y,Keyboard]}
         className="mySwiper"
       >
-        {categories.slice(0,10).map((media) => (
+       {content.content.slice(0,10).map((media) => (
           <SwiperSlide key={media.id}>
             <CarrouselCard id={media.id}
               title={media.title}
@@ -48,7 +51,7 @@ const CategoryCarrousel = ({type,category}) => {
               type={type}
             />
           </SwiperSlide>
-        ))}
+        ))} 
       </Swiper>
     </Box>
   );

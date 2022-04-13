@@ -22,7 +22,7 @@ const CarrouselCard = ({ type, id, title, src, name,height,width}) => {
       
           <CardMedia
             component="img"
-            image={src}
+            image={src}z
             height={height}
             alt={`poster of ${(title, name)}`}
           sx={{

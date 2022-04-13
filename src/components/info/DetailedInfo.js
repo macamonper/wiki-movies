@@ -15,113 +15,118 @@ import SocialMedia from "./SocialMedia";
 const DetailedInfo = () => {
 
   const params = useParams()
-  const info = useFetchInfo()
+  const info = useFetchInfo(params.type,params.id)
 
   return (
-    <Card
-      sx={{
-        borderRadius: "0px",
-      }}
-    >
-      <CardMedia
-        component="img"
-        alt={`poster of ${info.title}`}
-        height="500"
-
-        image={
-          info.poster_path &&
-          `https://image.tmdb.org/t/p/original/${info.backdrop_path}`
-        }
-      />
-      <CardContent sx={{ backgroundColor: "#131315" }}>
-        {params.type === "tv" ? (
-          <ToolBar array={tvInfoMenu} />
-        ) : (
-          <ToolBar array={movieInfoMenu} />
-        )}
-
-        <Container sx={{ display: "flex", alignItems: "strech", pt: 3 }}>
-          <Box
-            sx={{
-              objectFit: "cover",
-            }}
-          >
-            <CardMedia
-              component="img"
-              alt={`poster of ${info.title}`}
-              image={
-                info.poster_path &&
-                `https://image.tmdb.org/t/p/w500/${info.poster_path}`
-              }
-            />
-          </Box>
-
-          <Box sx={{ pl: "5em" }}>
-            <Typography variant="h4" color={"#FFFFFF"} fontSize={30} py={2}>
-              {info.title}
-            </Typography>
-            <Stars value={`${info.vote_average}`}></Stars>
-            {info.overview != null && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                {info.overview}
-              </Typography>
-            )}
-            {info.runtime > 1 && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                Duration: {info.runtime} minutes
-              </Typography>
-            )}
-            {info.release_date != null && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                Release date: {info.release_date}
-              </Typography>
-            )}
-            {info.first_air_date && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                Release date: {info.first_air_date}
-              </Typography>
-            )}
-            {info.budget > 1 && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                Budget: {currencyFormat(info.budget)}
-              </Typography>
-            )}
-            {info.revenue > 1 && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                Revenue: {currencyFormat(info.revenue)}
-              </Typography>
-            )}
-            {info.number_of_episodes && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                Episodes: {info.number_of_episodes}
-              </Typography>
-            )}
-            {info.number_of_season && (
-              <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
-                Seasons: {info.number_of_season}
-              </Typography>
-            )}
-          </Box>
-        </Container>
-      </CardContent>
-
-      <CardActions
+    <div>
+      <Card
         sx={{
-          backgroundColor: "#131315",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          borderRadius: "0px",
         }}
       >
-        {info.homepage && (
-          <a href={info.homepage} target="_blank" className="homepageLink">
-            Check it out here!
-          </a>
-        )}
+        <Box sx={{ height:"500px" }}>
+          <CardMedia
+            component="img"
+            alt={`poster of ${info.title}`}
+            height="100%"
+            image={
+              info.poster_path &&
+              `https://image.tmdb.org/t/p/original/${info.backdrop_path}`
+            }
+          />
+        </Box>
+        <CardContent sx={{ backgroundColor: "#131315" }}>
+          {params.type === "tv" ? (
+            <ToolBar array={tvInfoMenu} />
+          ) : (
+            <ToolBar array={movieInfoMenu} />
+          )}
 
-        <SocialMedia></SocialMedia>
-      </CardActions>
-    </Card>
+          <Container sx={{ display: "flex", alignItems: "strech", pt: 3 }}>
+            <Box
+              sx={{
+                objectFit: "cover",
+              }}
+            >
+              <CardMedia
+                component="img"
+                alt={`poster of ${info.title}`}
+                image={
+                  info.poster_path &&
+                  `https://image.tmdb.org/t/p/w500/${info.poster_path}`
+                }
+              />
+            </Box>
+
+            <Box sx={{ pl: "5em" }}>
+              <Typography variant="h4" color={"#FFFFFF"} fontSize={30} py={2}>
+                {info.title}
+              </Typography>
+
+              <Stars value={`${info.vote_average}`}></Stars>
+
+              {info.overview != null && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  {info.overview}
+                </Typography>
+              )}
+              {info.runtime > 1 && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  Duration: {info.runtime} minutes
+                </Typography>
+              )}
+              {info.release_date != null && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  Release date: {info.release_date}
+                </Typography>
+              )}
+              {info.first_air_date && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  Release date: {info.first_air_date}
+                </Typography>
+              )}
+              {info.budget > 1 && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  Budget: {currencyFormat(info.budget)}
+                </Typography>
+              )}
+              {info.revenue > 1 && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  Revenue: {currencyFormat(info.revenue)}
+                </Typography>
+              )}
+              {info.number_of_episodes && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  Episodes: {info.number_of_episodes}
+                </Typography>
+              )}
+              {info.number_of_season && (
+                <Typography variant="h5" color={"#F5F3F4"} fontSize={20} py={1}>
+                  Seasons: {info.number_of_season}
+                </Typography>
+              )}
+            </Box>
+          </Container>
+        </CardContent>
+
+        <CardActions
+          sx={{
+            backgroundColor: "#131315",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          {info.homepage && (
+            <a href={info.homepage} target="_blank" className="homepageLink">
+              Check it out here!
+            </a>
+          )}
+
+          <SocialMedia></SocialMedia>
+        </CardActions>
+      </Card>
+    </div>
   );
 };
 

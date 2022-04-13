@@ -5,7 +5,7 @@ import Carrousel from "./Carrousel";
 import { Link } from "react-router-dom";
 
 
-const CardContainer = ({ title, type,category}) => {
+const CardContainer = ({ title, type}) => {
   
     return (
       <Container maxWidth="xl">

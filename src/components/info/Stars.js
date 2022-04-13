@@ -3,7 +3,6 @@ import { Rating } from "@mui/material";
 
 const Stars = ({value}) => {
 
-  console.log(value)
   return (
     <Rating
       name="rating"
