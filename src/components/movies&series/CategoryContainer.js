@@ -13,20 +13,18 @@ const CategoryContainer = ({ title, type, category }) => {
     <Container maxWidth="xl">
       <Box
         sx={{
-          width: 250,
           display: "flex",
           alignItems: "flex-end",
-          justifyContent: "space-between",
+          justifyContent: "left",
         }}
       >
         <Typography
           variant="h3"
           fontSize={30}
           mt={5}
+          mr={2}
           color="#BD1E1E "
-          sx={{
-            lineHeight: 1.5,
-          }}
+       
         >
           {title}
         </Typography>

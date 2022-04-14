@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
 
+
 const CarrouselCard = ({ type, id, title, src, name,height,width}) => {
 
   return (
@@ -22,9 +23,9 @@ const CarrouselCard = ({ type, id, title, src, name,height,width}) => {
       
           <CardMedia
             component="img"
-            image={src}z
+            image={src}
             height={height}
-            alt={`poster of ${(title, name)}`}
+            alt={type==="tv" ? (`poster of ${name}`) : (`poster of ${title}`) }
           sx={{
               borderRadius:"4px",
             objectFit: "contain",

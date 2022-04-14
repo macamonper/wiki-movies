@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { apiKey, urlBase } from "../auxiliars/variables";
 
 const useFetchInfo = () => {
+  
   const params = useParams();
 
   const [info, setInfo] = useState([]);

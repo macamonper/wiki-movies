@@ -2,8 +2,9 @@ import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from "@mui/icons-material/Search";
-import variables from "../../auxiliars/variables"
-import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { IconButton } from '@mui/material';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -21,21 +22,10 @@ const Search = styled("div")(({ theme }) => ({
   },
 }));
 
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("md")]: {
@@ -45,22 +35,37 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const SearchBar = () => {
-// https://api.themoviedb.org/3/search/multi?query=hulk&api_key=072c30867a664bf27951890a08db787c&language=en-US&page=1&include_adult=false
+
+  const navigate = useNavigate();
+  const [inputBaseValue, setInputBaseValue] = useState("");
+
+  const handleSubmit = (e) => {
+        navigate(`/search/${inputBaseValue}`);
+
+  } 
+  const handleChangeSearch = (e) => {
+    setInputBaseValue(e.target.value);
+  };
     return (
-        <Box>
-   
-            <Search>
-                <SearchIconWrapper>
-                    <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                    placeholder="Search..."
+      <Box component="form" onSubmit={handleSubmit}>
+        <Search>
+          <IconButton type="submit">
+            <SearchIcon
+              sx={{
+                ":hover": {
+                  color: "#BD1E1E",
+                },
+              }}
+            />
+          </IconButton>
+
+          <StyledInputBase
+            placeholder="Search..."
             inputProps={{ "aria-label": "search" }}
-                />
-            </Search>
-       
-        </Box>
-   
+            onChange={handleChangeSearch}
+          />
+        </Search>
+      </Box>
     );
 }
 

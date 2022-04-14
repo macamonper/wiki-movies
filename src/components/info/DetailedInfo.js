@@ -11,6 +11,8 @@ import { Box } from "@mui/system";
 import Stars from "./Stars"
 import { currencyFormat } from "../../auxiliars/functions";
 import SocialMedia from "./SocialMedia";
+import notAvailable from "../../images/notAvailable.svg";
+
 
 const DetailedInfo = () => {
 
@@ -24,14 +26,15 @@ const DetailedInfo = () => {
           borderRadius: "0px",
         }}
       >
-        <Box sx={{ height:"500px" }}>
+        <Box sx={{ height: "500px" }}>
           <CardMedia
             component="img"
             alt={`poster of ${info.title}`}
             height="100%"
             image={
-              info.poster_path &&
-              `https://image.tmdb.org/t/p/original/${info.backdrop_path}`
+              info.backdrop_path === null
+                ? notAvailable
+                : `https://image.tmdb.org/t/p/original/${info.backdrop_path}`
             }
           />
         </Box>
@@ -43,17 +46,14 @@ const DetailedInfo = () => {
           )}
 
           <Container sx={{ display: "flex", alignItems: "strech", pt: 3 }}>
-            <Box
-              sx={{
-                objectFit: "cover",
-              }}
-            >
+            <Box sx={{ height: "250px" }}>
               <CardMedia
                 component="img"
                 alt={`poster of ${info.title}`}
                 image={
-                  info.poster_path &&
-                  `https://image.tmdb.org/t/p/w500/${info.poster_path}`
+                  info.poster_path === null
+                    ? notAvailable
+                    : `https://image.tmdb.org/t/p/w500/${info.poster_path}`
                 }
               />
             </Box>

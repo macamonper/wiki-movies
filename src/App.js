@@ -3,6 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import NavBar from "./components/header/NavBar";
+import SearchContent from "./components/header/SearchContent";
 import Home from "./components/home/Home";
 import Movies from "./components/movies&series/Movies";
 import Series from "./components/movies&series/Series";
@@ -25,6 +26,7 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/search/:value"element={<SearchContent/>} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/tv" element={<Series />} />
           <Route path=":type/:id/info" element={<DetailedInfo />} />

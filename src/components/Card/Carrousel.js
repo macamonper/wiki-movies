@@ -6,6 +6,8 @@ import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "./CarrouselCard";
 import { useState } from "react";
 import useFetchTrending from '../../hooks/useFetchTrending';
+import notAvailable from "../../images/notAvailable.svg";
+
 
 const Carrousel = ({ type }) => {
   const [page, setPage] = useState(1);
@@ -42,7 +44,7 @@ const Carrousel = ({ type }) => {
             <CarrouselCard
               title={media.title}
               name={media.name}
-              src={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
+              src={media.poster_path != null ? (`https://image.tmdb.org/t/p/w300/${media.poster_path}`) : notAvailable}
               id={media.id}
               type={type}
             />

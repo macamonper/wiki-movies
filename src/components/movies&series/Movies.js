@@ -25,7 +25,7 @@ const Movies = () => {
           category="upcoming"
         />
         <CategoryContainer
-          title="Now playing"
+          title="Now playing movies"
           type="movie"
           category="now_playing"
         />

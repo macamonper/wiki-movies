@@ -3,6 +3,8 @@ import { Container, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import CarrouselCard from "../Card/CarrouselCard";
 import Pager from "./Pager";
+import notAvailable from "../../images/notAvailable.svg";
+
 
 const MediaContent = ({ title, content, count,page,changePage}) => {
 
@@ -20,7 +22,7 @@ const MediaContent = ({ title, content, count,page,changePage}) => {
               mt={5}
               color="#BD1E1E "
             >
-              {title} {params.type}
+              {title} {params.type} shows
             </Typography>
           ) : (
             <Typography
@@ -41,15 +43,20 @@ const MediaContent = ({ title, content, count,page,changePage}) => {
             justifyContent: "space-around",
           }}
         >
-          {content .map((media) => (
-            <CarrouselCard key={media.id}
+          {content.map((media) => (
+            <CarrouselCard
+              key={media.id}
               height={300}
               width={203}
               id={media.id}
               title={media.title}
               name={media.name}
-              src={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
-              type={params.type}
+              src={
+                media.poster_path != null
+                  ? `https://image.tmdb.org/t/p/w300/${media.poster_path}`
+                  : notAvailable
+              }
+              type={params.type ? params.type : media.media_type}
             />
           ))}
         </Box>

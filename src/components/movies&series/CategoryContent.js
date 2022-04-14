@@ -15,14 +15,13 @@ const CategoryContent = () => {
   };   
   
   const content = useFetchCategory(params.type, params.category, page)
-  console.log(content)
   
   const title = params.category.replaceAll("_", " ");
 
 
   return (
     <MediaContent
-      title={title}
+      title={title === "on the air" ? ("Currently airing") : (title)}
       content={content.content}
       count={content.totalPages> 500 ? 500 : content.totalPages} 
       page={page}

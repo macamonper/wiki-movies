@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { Box } from "@mui/system";
 import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "../Card/CarrouselCard";
+import notAvailable from "../../images/notAvailable.svg"
 
 
 
@@ -37,21 +38,26 @@ const CategoryCarrousel = ({ type, category }) => {
         }}
         loop={true}
         keyboard={{
-          enabled: true
+          enabled: true,
         }}
-        modules={[FreeMode, Autoplay, Pagination, A11y,Keyboard]}
+        modules={[FreeMode, Autoplay, Pagination, A11y, Keyboard]}
         className="mySwiper"
       >
-       {content.content.slice(0,10).map((media) => (
+        {content.content.slice(0, 10).map((media) => (
           <SwiperSlide key={media.id}>
-            <CarrouselCard id={media.id}
+            <CarrouselCard
+              id={media.id}
               title={media.title}
               name={media.name}
-              src={`https://image.tmdb.org/t/p/w300/${media.poster_path}`}
+              src={
+                media.poster_path != null
+                  ? `https://image.tmdb.org/t/p/w300/${media.poster_path}`
+                  : notAvailable
+              }
               type={type}
             />
           </SwiperSlide>
-        ))} 
+        ))}
       </Swiper>
     </Box>
   );
