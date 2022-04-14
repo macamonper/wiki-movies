@@ -3,7 +3,7 @@ import { Container, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import CarrouselCard from "../Card/CarrouselCard";
 import Pager from "./Pager";
-import notAvailable from "../../images/notAvailable.svg";
+import { selectImage } from "../../auxiliars/functions";
 
 
 const MediaContent = ({ title, content, count,page,changePage}) => {
@@ -49,13 +49,9 @@ const MediaContent = ({ title, content, count,page,changePage}) => {
               height={300}
               width={203}
               id={media.id}
-              title={media.title}
+              title={media.title ? media.title : media.name}
               name={media.name}
-              src={
-                media.poster_path != null
-                  ? `https://image.tmdb.org/t/p/w300/${media.poster_path}`
-                  : notAvailable
-              }
+              src={selectImage(media, "w500")}
               type={params.type ? params.type : media.media_type}
             />
           ))}

@@ -7,7 +7,7 @@ import CarrouselCard from "./CarrouselCard";
 import { useState } from "react";
 import useFetchTrending from '../../hooks/useFetchTrending';
 import notAvailable from "../../images/notAvailable.svg";
-
+import { selectImage } from "../../auxiliars/functions";
 
 const Carrousel = ({ type }) => {
   const [page, setPage] = useState(1);
@@ -15,7 +15,6 @@ const Carrousel = ({ type }) => {
   
   return (
     <div>
-   
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
@@ -39,12 +38,12 @@ const Carrousel = ({ type }) => {
         modules={[FreeMode, Autoplay, Pagination, A11y, Keyboard]}
         className="mySwiper"
       >
-   {content.content.slice(0, 10).map((media) => (
+        {content.content.slice(0, 10).map((media) => (
           <SwiperSlide key={media.id}>
             <CarrouselCard
               title={media.title}
               name={media.name}
-              src={media.poster_path != null ? (`https://image.tmdb.org/t/p/w300/${media.poster_path}`) : notAvailable}
+              src={selectImage(media,"w500")}
               id={media.id}
               type={type}
             />

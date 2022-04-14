@@ -7,9 +7,12 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { Box } from "@mui/system";
+import { useParams } from "react-router-dom";
 
 
 const SocialMedia = () => {
+
+  const params = useParams()
 
   const socialMedia = useFetchSocialMedia();
 
@@ -19,7 +22,11 @@ const SocialMedia = () => {
         <Button
           size="large"
           aria-label="visit Imdb page"
-          href={`https://imdb.com/title/${socialMedia.imdb_id}`}
+          href={
+            params.type === "person"
+              ? `https://imdb.com/name/${socialMedia.imdb_id}`
+              : `https://imdb.com/title/${socialMedia.imdb_id}`
+          }
           target="_blank"
           rel="noopener noreferrer"
           sx={{
