@@ -3,10 +3,8 @@ import { apiKey, urlBase } from "../auxiliars/variables";
 
 const useFetchCategory = (type, categoryContent,page) => {
   
-    
   const [category, setCategories] = useState([]);
-    const [totalPages, setTotalPages] = useState(1);
-
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     fetch(`${urlBase}/${type}/${categoryContent}?api_key=${apiKey}&language=en-US&page=${page}`)

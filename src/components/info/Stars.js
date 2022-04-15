@@ -4,13 +4,14 @@ import { Rating } from "@mui/material";
 const Stars = ({value}) => {
 
   return (
-    <Rating
-      name="rating"
-      max={10}
-      value={value}
-      precision={0.5}
-      emptyIcon={<StarBorderIcon className="Star" fontSize="inherit" />}
-      readOnly
+      <Rating
+        name="rating"
+        max={10}
+        value={value}
+        precision={0.5}
+        size="small"
+        emptyIcon={<StarBorderIcon className="Star" fontSize="inherit" />}
+        readOnly
       />
   );
 };

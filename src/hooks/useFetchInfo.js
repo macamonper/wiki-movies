@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 import { apiKey, urlBase } from "../auxiliars/variables";
 
 const useFetchInfo = () => {
-  
   const params = useParams();
-
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
@@ -14,7 +12,7 @@ const useFetchInfo = () => {
     )
       .then((res) => res.json())
       .then((data) => setInfo(data));
-  }, []);
+  }, [params.id]);
 
   return info;
 };

@@ -14,9 +14,9 @@ export const selectImage = (content, size) => {
   } else if (
     content.poster_path === null ||
     content.profile_path === null ||
-    content.still_path === null
+    content.still_path === null 
+     
   )
     return notAvailable;
 }
-
-
+ 

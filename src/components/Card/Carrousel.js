@@ -6,7 +6,6 @@ import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
 import CarrouselCard from "./CarrouselCard";
 import { useState } from "react";
 import useFetchTrending from '../../hooks/useFetchTrending';
-import notAvailable from "../../images/notAvailable.svg";
 import { selectImage } from "../../auxiliars/functions";
 
 const Carrousel = ({ type }) => {

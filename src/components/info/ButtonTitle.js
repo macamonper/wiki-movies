@@ -6,22 +6,19 @@ const ButtonTitle = ({ title }) => {
 
     const params = useParams()
     const titleToLowerCase = title.toLowerCase()
+
     return (
-   
-                  <Button component={Link} to={`/${params.type}/${params.id}/${titleToLowerCase}`}
-                    size="large"
-                    sx={{
-                        color: "#BD1E1E",
-                        fontFamily: " 'Bebas Neue', cursive",
-                        fontSize: 25,
-                    }}
-                >
-                    {title}
-                </Button>
-            
-        
+
+        <Button component={Link} to={`/${params.type}/${params.id}/${titleToLowerCase}`}
+        size="large"
+        sx={{
+            color: "#BD1E1E",
+            fontFamily: " 'Bebas Neue', cursive",
+        }}>
+        {title}
+    </Button>
     )
-} 
+}
 
 export default ButtonTitle;
 

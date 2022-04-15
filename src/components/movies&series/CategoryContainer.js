@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 
 
 const CategoryContainer = ({ title, type, category }) => {
-  
-
   return (
     
     <Container maxWidth="xl">
@@ -20,7 +18,6 @@ const CategoryContainer = ({ title, type, category }) => {
       >
         <Typography
           variant="h3"
-          fontSize={30}
           mt={5}
           mr={2}
           color="#BD1E1E "

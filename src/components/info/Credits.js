@@ -5,17 +5,18 @@ import CarrouselCard from "../Card/CarrouselCard";
 import { urlBase, apiKey } from "../../auxiliars/variables";
 import { selectImage } from "../../auxiliars/functions";
 
-const Similars = () => {
+const Credits= () => {
   const params = useParams();
-  const [similars, setSimilars] = useState([]);
+  const [credits, setCredits] = useState([]);
 
   useEffect(() => {
-      fetch(`${urlBase}/${params.type}/${params.id}/similar?api_key=${apiKey}&language=en-US`)
+      fetch(
+      `${urlBase}/person/${params.id}/combined_credits?api_key=${apiKey}&language=en-US`)
       .then((res) => res.json())
       .then((data) => {
-        setSimilars(data.results);
+        setCredits(data.cast);
       });
-  }, []);
+  }, [params.id]);
 
   return (
     <Box
@@ -25,20 +26,18 @@ const Similars = () => {
         justifyContent: "space-around",
       }}
     >
-      {similars.map((content) => (
-        
+      {credits.map((credit) => (
         <CarrouselCard
-          key={content.id}
+          key={credit.id}
           height={300}
           width={203}
-          title={content.title}
-          name={content.name}
-          src={selectImage(content,"w500")}
-          id={content.id}
-          type={params.type}
-           />
+          id={credit.id}
+        title={credit.title ? credit.title : credit.name}
+          type={credit.media_type}
+          src={selectImage(credit, "original")}
+        />
       ))}
     </Box>
   );
 };
-export default Similars;
+export default Credits;

@@ -29,7 +29,7 @@ const Error404 = () => {
             >
               Yep, You win. I've never seen that...
             </Typography>
-         
+        
             <Typography
               variant="h1"
               fontSize={250}
@@ -38,6 +38,7 @@ const Error404 = () => {
             >
               404
             </Typography>
+
             <Typography
               variant="p"
               fontSize={20}
@@ -49,6 +50,7 @@ const Error404 = () => {
             >
               Please, STOP embarassing at my workplace😳!
             </Typography>
+
             <Typography
               variant="p"
               fontSize={20}
@@ -65,6 +67,5 @@ const Error404 = () => {
         </Container>
       </Paper>
     );
-
 }
 export default Error404;

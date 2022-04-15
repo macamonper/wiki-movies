@@ -1,7 +1,6 @@
 import { useState,useEffect} from "react";
 import { apiKey, urlBase } from "../auxiliars/variables";
 
-
 const useFetchTrending = (type,page) => {
 
   const [content, setContent] = useState([]);
@@ -17,7 +16,6 @@ const useFetchTrending = (type,page) => {
         
       })
   }, [page])
-    
   return {
     content: content,
     totalPages: totalPages,

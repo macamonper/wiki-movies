@@ -5,17 +5,13 @@ import { useParams } from "react-router-dom";
 
 const SearchContent = () => {
 
-    const params = useParams();
-
-    const [page, setPage] = useState(1);
-
-    const [totalPages, setTotalPages] = useState(1);
-
-    const handleChangePage = (event, value) => {
-        setPage(value)
-    };
-
-    const [content, setContent] = useState([]);
+  const params = useParams();
+  const [content, setContent] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const handleChangePage = (event, value) => {
+      setPage(value)
+  };
 
     useEffect(() => {
 

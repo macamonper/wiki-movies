@@ -4,7 +4,6 @@ import { apiKey, urlBase } from "../auxiliars/variables";
 
 const useFetchSocialMedia = () => {
   const params = useParams();
-
   const [socialMedia, setSocialMedia] = useState([]);
 
   useEffect(() => {

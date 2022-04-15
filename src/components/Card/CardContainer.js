@@ -19,7 +19,6 @@ const CardContainer = ({ title, type}) => {
         >
           <Typography
             variant="h1"
-            fontSize={30}
             mt={5}
             color="#BD1E1E"
             sx={{
@@ -27,7 +26,7 @@ const CardContainer = ({ title, type}) => {
             }}
           >
             {title}
-          </Typography>
+            </Typography>
 
           <IconButton
             component={Link}
@@ -50,5 +49,4 @@ const CardContainer = ({ title, type}) => {
       </Container>
     );
 }
-
 export default CardContainer;

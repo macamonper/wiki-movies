@@ -7,17 +7,12 @@ import { useState } from "react";
 const CategoryContent = () => {
 
   const params = useParams()
-
-   const [page, setPage] = useState(1);
-
-   const handleChangePage = (event, value) => {
-     setPage(value);
+  const [page, setPage] = useState(1);
+  const handleChangePage = (event, value) => {
+    setPage(value);
   };   
-  
   const content = useFetchCategory(params.type, params.category, page)
-  
   const title = params.category.replaceAll("_", " ");
-
 
   return (
     <MediaContent

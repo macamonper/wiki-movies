@@ -1,7 +1,6 @@
 import { Paper } from "@mui/material";
 import CardContainer from "../Card/CardContainer";
 
-
 const Home = () => {
 
   return (

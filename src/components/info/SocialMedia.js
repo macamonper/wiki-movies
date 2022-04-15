@@ -1,14 +1,8 @@
 import { Button } from "@mui/material";
 import useFetchSocialMedia from "../../hooks/useFetchSocialMedia";
-import {
-  FaFacebook,
-  FaImdb,
-  FaTwitterSquare,
-  FaInstagram,
-} from "react-icons/fa";
+import {FaFacebook,FaImdb,FaTwitterSquare,FaInstagram} from "react-icons/fa";
 import { Box } from "@mui/system";
 import { useParams } from "react-router-dom";
-
 
 const SocialMedia = () => {
 
@@ -17,7 +11,7 @@ const SocialMedia = () => {
   const socialMedia = useFetchSocialMedia();
 
   return (
-    <Box sx={{ m: "1em" }}>
+    <Box sx={{p: "0px"}}>
       {socialMedia.imdb_id != null && (
         <Button
           size="large"
@@ -30,7 +24,6 @@ const SocialMedia = () => {
           target="_blank"
           rel="noopener noreferrer"
           sx={{
-            fontSize: "1.5rem",
             color: "#BD1E1E",
           }}
         >
@@ -43,8 +36,8 @@ const SocialMedia = () => {
           href={`https://www.facebook.com/${socialMedia.facebook_id}/`}
           target="_blank"
           rel="noopener noreferrer"
+          size="large"
           sx={{
-            fontSize: "1.5rem",
             color: "#BD1E1E",
           }}
         >
@@ -57,8 +50,8 @@ const SocialMedia = () => {
           href={`https://twitter.com/${socialMedia.twitter_id}`}
           target="_blank"
           rel="noopener noreferrer"
+          size="large"
           sx={{
-            fontSize: "1.5rem",
             color: "#BD1E1E",
           }}
         >
@@ -71,8 +64,8 @@ const SocialMedia = () => {
           href={`https://instagram.com/${socialMedia.instagram_id}`}
           target="_blank"
           rel="noopener noreferrer"
+          size="large"
           sx={{
-            fontSize: "1.5rem",
             color: "#BD1E1E",
           }}
         >
@@ -82,7 +75,5 @@ const SocialMedia = () => {
     </Box>
   );
 }
-
-
 
 export default SocialMedia;

@@ -38,16 +38,19 @@ const SearchBar = () => {
 
   const navigate = useNavigate();
   const [inputBaseValue, setInputBaseValue] = useState("");
-
   const handleSubmit = (e) => {
         navigate(`/search/${inputBaseValue}`);
-
   } 
   const handleChangeSearch = (e) => {
     setInputBaseValue(e.target.value);
   };
+
     return (
-      <Box component="form" onSubmit={handleSubmit}>
+      <Box
+        component="form"
+        onSubmit={handleSubmit}
+        sx={{ flexGrow: 1, display: { xs: "flex"} }}
+      >
         <Search>
           <IconButton type="submit">
             <SearchIcon
@@ -55,10 +58,10 @@ const SearchBar = () => {
                 ":hover": {
                   color: "#BD1E1E",
                 },
+                display: { xs: "none", md: "flex" },
               }}
             />
           </IconButton>
-
           <StyledInputBase
             placeholder="Search..."
             inputProps={{ "aria-label": "search" }}
