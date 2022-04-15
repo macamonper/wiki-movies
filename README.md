@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/macamonper/wiki-movies">
-    <img src="wiki-movies/src/images/logoWikiMovies.svg" alt="Logo" width="80" height="80">
+    <img src="wiki-movies/images/logoWikiMovies.ico" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Wiki Movies</h3>
