@@ -1,10 +1,5 @@
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://wikimoviesandseries.netlify.app/">
-    <img src="wiki-movies/images/logoWikiMovies.ico" alt="Logo" width="80" height="80">
-  </a>
+
 
 <h3 align="center">Wiki Movies</h3>
 
@@ -26,12 +21,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Wiki Movies Screen Shot][product-screenshot]](https://macamonper.github.io/wiki-movies/)
-
 This repository is a project made for ADA. I used the movie database API and JSX to create a web page where you can browse different movies, series or actors by differents categories.
 You will be able to use a searchbar that will bring you every result store in the Api.
-
-
 
 
 ### Built With
