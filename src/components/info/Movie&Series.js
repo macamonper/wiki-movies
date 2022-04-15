@@ -1,6 +1,6 @@
 import React from "react";
 import { currencyFormat, selectImage } from "../../auxiliars/functions";
-import {infoMenu} from "../../auxiliars/variables";
+import { infoMenu } from "../../auxiliars/variables";
 import { useParams } from "react-router-dom";
 import { Box } from "@mui/system";
 import CardContent from "@mui/material/CardContent";
@@ -10,13 +10,12 @@ import { CardActions, Container, Typography } from "@mui/material";
 import SocialMedia from "./SocialMedia";
 import Stars from "./Stars";
 import Cast from "./Cast";
-import Videos from "./Videos"
+import Videos from "./Videos";
 import Similars from "./Similars";
 
-const MovieAndSeries = ({ info } ) => {
+const MovieAndSeries = ({ info }) => {
+  const params = useParams();
 
-  const params = useParams()
-  
   return (
     <React.Fragment>
       <Box sx={{ height: "500px", p: "0px" }}>

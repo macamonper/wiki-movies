@@ -1,10 +1,10 @@
-import { styled, alpha } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import InputBase from '@mui/material/InputBase';
+import { styled, alpha } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { IconButton } from '@mui/material';
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { IconButton } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -35,41 +35,40 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const SearchBar = () => {
-
   const navigate = useNavigate();
   const [inputBaseValue, setInputBaseValue] = useState("");
   const handleSubmit = (e) => {
-        navigate(`/search/${inputBaseValue}`);
-  } 
+    navigate(`/search/${inputBaseValue}`);
+  };
   const handleChangeSearch = (e) => {
     setInputBaseValue(e.target.value);
   };
 
-    return (
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        sx={{ flexGrow: 1, display: { xs: "flex"} }}
-      >
-        <Search>
-          <IconButton type="submit">
-            <SearchIcon
-              sx={{
-                ":hover": {
-                  color: "#BD1E1E",
-                },
-                display: { xs: "none", md: "flex" },
-              }}
-            />
-          </IconButton>
-          <StyledInputBase
-            placeholder="Search..."
-            inputProps={{ "aria-label": "search" }}
-            onChange={handleChangeSearch}
+  return (
+    <Box
+      component="form"
+      onSubmit={handleSubmit}
+      sx={{ flexGrow: 1, display: { xs: "flex" } }}
+    >
+      <Search>
+        <IconButton type="submit">
+          <SearchIcon
+            sx={{
+              ":hover": {
+                color: "#BD1E1E",
+              },
+              display: { xs: "none", md: "flex" },
+            }}
           />
-        </Search>
-      </Box>
-    );
-}
+        </IconButton>
+        <StyledInputBase
+          placeholder="Search..."
+          inputProps={{ "aria-label": "search" }}
+          onChange={handleChangeSearch}
+        />
+      </Search>
+    </Box>
+  );
+};
 
 export default SearchBar;

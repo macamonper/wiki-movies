@@ -12,7 +12,7 @@ const useFetchSocialMedia = () => {
     )
       .then((res) => res.json())
       .then((data) => setSocialMedia(data));
-  }, [params.id,params.type]);
+  }, [params.id, params.type]);
 
   return socialMedia;
 };

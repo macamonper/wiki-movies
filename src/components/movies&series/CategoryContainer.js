@@ -4,10 +4,8 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CategoryCarrousel from "./CategoryCarrousel";
 import { Link } from "react-router-dom";
 
-
 const CategoryContainer = ({ title, type, category }) => {
   return (
-    
     <Container maxWidth="xl">
       <Box
         sx={{
@@ -16,13 +14,7 @@ const CategoryContainer = ({ title, type, category }) => {
           justifyContent: "left",
         }}
       >
-        <Typography
-          variant="h3"
-          mt={5}
-          mr={2}
-          color="#BD1E1E "
-       
-        >
+        <Typography variant="h3" mt={5} mr={2} color="#BD1E1E ">
           {title}
         </Typography>
 
@@ -43,10 +35,7 @@ const CategoryContainer = ({ title, type, category }) => {
       </Box>
 
       <Box sx={{ mt: 3, mb: 1.5 }}>
-        <CategoryCarrousel
-          type={type}
-          category={category}
-        ></CategoryCarrousel>
+        <CategoryCarrousel type={type} category={category}></CategoryCarrousel>
       </Box>
     </Container>
   );

@@ -5,11 +5,9 @@ import CarrouselCard from "../Card/CarrouselCard";
 import Pager from "./Pager";
 import { selectImage } from "../../auxiliars/functions";
 
-
-const MediaContent = ({ title, content, count,page,changePage}) => {
-
+const MediaContent = ({ title, content, count, page, changePage }) => {
   const params = useParams();
- 
+
   return (
     <Paper variant="outlined" square sx={{ backgroundColor: "#131315", pb: 6 }}>
       <Container maxWidth="xl">

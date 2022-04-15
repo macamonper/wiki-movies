@@ -2,16 +2,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
+import { A11y, Autoplay, FreeMode, Keyboard, Pagination } from "swiper";
 import CarrouselCard from "./CarrouselCard";
-import { useState } from "react";
-import useFetchTrending from '../../hooks/useFetchTrending';
+import useFetchTrending from "../../hooks/useFetchTrending";
 import { selectImage } from "../../auxiliars/functions";
 
 const Carrousel = ({ type }) => {
-  const [page, setPage] = useState(1);
-  const content = useFetchTrending(type,page);
-  
+  const content = useFetchTrending(type, page);
+
   return (
     <div>
       <Swiper
@@ -42,7 +40,7 @@ const Carrousel = ({ type }) => {
             <CarrouselCard
               title={media.title}
               name={media.name}
-              src={selectImage(media,"w500")}
+              src={selectImage(media, "w500")}
               id={media.id}
               type={type}
             />
@@ -51,5 +49,5 @@ const Carrousel = ({ type }) => {
       </Swiper>
     </div>
   );
-}
+};
 export default Carrousel;

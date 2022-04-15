@@ -10,7 +10,9 @@ const Similars = () => {
   const [similars, setSimilars] = useState([]);
 
   useEffect(() => {
-      fetch(`${urlBase}/${params.type}/${params.id}/similar?api_key=${apiKey}&language=en-US`)
+    fetch(
+      `${urlBase}/${params.type}/${params.id}/similar?api_key=${apiKey}&language=en-US`
+    )
       .then((res) => res.json())
       .then((data) => {
         setSimilars(data.results);
@@ -26,17 +28,16 @@ const Similars = () => {
       }}
     >
       {similars.map((content) => (
-        
         <CarrouselCard
           key={content.id}
           height={300}
           width={203}
           title={content.title}
           name={content.name}
-          src={selectImage(content,"w500")}
+          src={selectImage(content, "w500")}
           id={content.id}
           type={params.type}
-           />
+        />
       ))}
     </Box>
   );

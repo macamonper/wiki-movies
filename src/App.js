@@ -1,5 +1,5 @@
 import React from "react";
-import CssBaseline from '@mui/material/CssBaseline';
+import CssBaseline from "@mui/material/CssBaseline";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import NavBar from "./components/header/NavBar";
@@ -13,7 +13,6 @@ import TrendingContent from "./components/movies&series/TrendingContent";
 import Error404 from "./components/404/Error404";
 import Footer from "./components/footer/Footer";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
 
 let theme = createTheme({});
 
@@ -69,10 +68,7 @@ theme = createTheme(theme, {
   },
 });
 
-
-
-  const App = () => {
-  
+const App = () => {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -95,6 +91,6 @@ theme = createTheme(theme, {
       </BrowserRouter>
     </React.Fragment>
   );
-}
+};
 
 export default App;

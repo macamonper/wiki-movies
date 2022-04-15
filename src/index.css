@@ -1,47 +1,46 @@
-h5{
-    font-family: 'Source Sans Pro', sans-serif !important;
-}
-    
-h1,h3,h4,a{
-    font-family: 'Bebas Neue', cursive !important;
+h5 {
+  font-family: "Source Sans Pro", sans-serif !important;
 }
 
-
-.swiper-pagination-bullet{
-    background: #ffff !important;
-    bottom: 1px;
-    padding-top: 5px;
-}
-.swiper-wrapper{
-    margin-bottom: 4px !important;
+h1,
+h3,
+h4,
+a {
+  font-family: "Bebas Neue", cursive !important;
 }
 
-.carrouselCard:hover{
-    transition: transform .2s ease-in;
-    transform: scale(1.03);
-
+.swiper-pagination-bullet {
+  background: #ffff !important;
+  bottom: 1px;
+  padding-top: 5px;
+}
+.swiper-wrapper {
+  margin-bottom: 4px !important;
 }
 
-.Star{
-color: rgba(246, 184, 28, 0.53) !important;
+.carrouselCard:hover {
+  transition: transform 0.2s ease-in;
+  transform: scale(1.03);
 }
 
-.homepageLink{
-    text-decoration: none;
-    color:#BD1E1E !important;
+.Star {
+  color: rgba(246, 184, 28, 0.53) !important;
 }
 
-.socialMediaContainer{
-    padding-left: 0px !important;
-    margin-left: 0px !important;
+.homepageLink {
+  text-decoration: none;
+  color: #bd1e1e !important;
 }
 
+.socialMediaContainer {
+  padding-left: 0px !important;
+  margin-left: 0px !important;
+}
 
-.MuiPaginationItem-root{
-    color: #ffff !important;
-
+.MuiPaginationItem-root {
+  color: #ffff !important;
 }
 
 .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
-background-color: #BD1E1E !important;
+  background-color: #bd1e1e !important;
 }

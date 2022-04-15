@@ -5,13 +5,14 @@ import CarrouselCard from "../Card/CarrouselCard";
 import { urlBase, apiKey } from "../../auxiliars/variables";
 import { selectImage } from "../../auxiliars/functions";
 
-const Credits= () => {
+const Credits = () => {
   const params = useParams();
   const [credits, setCredits] = useState([]);
 
   useEffect(() => {
-      fetch(
-      `${urlBase}/person/${params.id}/combined_credits?api_key=${apiKey}&language=en-US`)
+    fetch(
+      `${urlBase}/person/${params.id}/combined_credits?api_key=${apiKey}&language=en-US`
+    )
       .then((res) => res.json())
       .then((data) => {
         setCredits(data.cast);
@@ -32,7 +33,7 @@ const Credits= () => {
           height={300}
           width={203}
           id={credit.id}
-        title={credit.title ? credit.title : credit.name}
+          title={credit.title ? credit.title : credit.name}
           type={credit.media_type}
           src={selectImage(credit, "original")}
         />

@@ -4,15 +4,14 @@ import { useParams } from "react-router-dom";
 import MediaContent from "./MediaContent";
 
 const TrendingContent = () => {
-  
   const params = useParams();
   const [page, setPage] = useState(1);
   const handleChangePage = (event, value) => {
     setPage(value);
-  };   
-  const content = useFetchTrending(params.type, page)
+  };
+  const content = useFetchTrending(params.type, page);
   const title = "Trending";
-  
+
   return (
     <MediaContent
       title={title}

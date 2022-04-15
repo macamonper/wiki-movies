@@ -1,17 +1,21 @@
 import { Button } from "@mui/material";
 import useFetchSocialMedia from "../../hooks/useFetchSocialMedia";
-import {FaFacebook,FaImdb,FaTwitterSquare,FaInstagram} from "react-icons/fa";
+import {
+  FaFacebook,
+  FaImdb,
+  FaTwitterSquare,
+  FaInstagram,
+} from "react-icons/fa";
 import { Box } from "@mui/system";
 import { useParams } from "react-router-dom";
 
 const SocialMedia = () => {
-
-  const params = useParams()
+  const params = useParams();
 
   const socialMedia = useFetchSocialMedia();
 
   return (
-    <Box sx={{p: "0px"}}>
+    <Box sx={{ p: "0px" }}>
       {socialMedia.imdb_id != null && (
         <Button
           size="large"
@@ -74,6 +78,6 @@ const SocialMedia = () => {
       )}
     </Box>
   );
-}
+};
 
 export default SocialMedia;

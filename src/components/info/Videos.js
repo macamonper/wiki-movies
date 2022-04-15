@@ -17,21 +17,21 @@ const Videos = () => {
         setVideos(data.results);
       });
   }, [params.id]);
-    return (
-
-        <Box sx={{ display: "flex",justifyContent:"space-evenly",flexWrap:"wrap" }}  >
-            
-        {videos.map((video) => (
-          <Box m={3}>
-            <ReactPlayer
-              className="react-player"
-              url={`https://www.youtube.com/watch?v=${video.key}`}
-              width="100%"
-              height="100%"
-            />
-          </Box>
-        ))}
+  return (
+    <Box
+      sx={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}
+    >
+      {videos.map((video) => (
+        <Box m={3}>
+          <ReactPlayer
+            className="react-player"
+            url={`https://www.youtube.com/watch?v=${video.key}`}
+            width="100%"
+            height="100%"
+          />
         </Box>
-    );
+      ))}
+    </Box>
+  );
 };
 export default Videos;

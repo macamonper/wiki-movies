@@ -1,23 +1,16 @@
-import { useState } from "react";
-import useFetchCategory from '../../hooks/useFetchCategory';
+import useFetchCategory from "../../hooks/useFetchCategory";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Box } from "@mui/system";
-import { A11y, Autoplay, FreeMode,Keyboard,Pagination } from "swiper";
+import { A11y, Autoplay, FreeMode, Keyboard, Pagination } from "swiper";
 import CarrouselCard from "../Card/CarrouselCard";
-import notAvailable from "../../images/notAvailable.svg"
-
-
-
+import notAvailable from "../../images/notAvailable.svg";
 
 const CategoryCarrousel = ({ type, category }) => {
-  
-  const [page, setPage] = useState(1);
-  
-  const content = useFetchCategory(type, category,page);
-  
+  const content = useFetchCategory(type, category, page);
+
   return (
     <Box>
       <Swiper
@@ -61,5 +54,5 @@ const CategoryCarrousel = ({ type, category }) => {
       </Swiper>
     </Box>
   );
-}
+};
 export default CategoryCarrousel;

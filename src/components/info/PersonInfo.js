@@ -8,13 +8,12 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import ToolBar from "./Toolbar";
 import Stars from "./Stars";
-import SocialMedia  from "./SocialMedia";
+import SocialMedia from "./SocialMedia";
 import Credits from "./Credits";
 
 const PersonInfo = ({ info }) => {
-  const params= useParams()
+  const params = useParams();
   return (
-
     <React.Fragment>
       <CardContent sx={{ backgroundColor: "#131315" }}>
         <ToolBar array={personInfoMenu} />
@@ -105,10 +104,7 @@ const PersonInfo = ({ info }) => {
               </Container>
             </React.Fragment>
           )}
-          {params.menu === "credits" && (
-            <Credits/>
-          )}
-
+          {params.menu === "credits" && <Credits />}
         </Container>
       </CardContent>
     </React.Fragment>

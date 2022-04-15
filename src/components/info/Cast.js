@@ -6,22 +6,20 @@ import { urlBase, apiKey } from "../../auxiliars/variables";
 import notAvailable from "../../images/notAvailable.svg";
 
 const Cast = () => {
-    
-  const params = useParams()
+  const params = useParams();
   const [cast, setCast] = useState([]);
-  
-    
-    useEffect(() => {
 
-      fetch(`${urlBase}/${params.type}/${params.id}/credits?api_key=${apiKey}&language=en-US`)
-        .then((res) => res.json())
-        .then((data) => {
-          setCast(data.cast)
-        });
-    }, []);
-  
+  useEffect(() => {
+    fetch(
+      `${urlBase}/${params.type}/${params.id}/credits?api_key=${apiKey}&language=en-US`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setCast(data.cast);
+      });
+  }, []);
+
   return (
-
     <Box
       sx={{
         display: "flex",
@@ -45,7 +43,6 @@ const Cast = () => {
         />
       ))}
     </Box>
-  
   );
 };
 export default Cast;
