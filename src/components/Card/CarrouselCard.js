@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
 const CarrouselCard = ({ type, id, title, src, name, height, width }) => {
+
   return (
     <Grid spacing={2}>
       <Grid item xs={12} sm={6}>

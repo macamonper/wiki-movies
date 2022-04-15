@@ -21,7 +21,7 @@ const CategoryContainer = ({ title, type, category }) => {
         <IconButton
           component={Link}
           to={`/${type}/${category}`}
-          aria-label="see more ${title}"
+          aria-label={`see more ${title}`}
           sx={{
             color: "#FFFFFF",
             ":hover": {

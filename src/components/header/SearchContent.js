@@ -21,7 +21,7 @@ const SearchContent = () => {
         setContent(data.results);
         setTotalPages(data.total_pages);
       });
-  }, [page]);
+  }, [page,params.value]);
 
   return (
     <MediaContent

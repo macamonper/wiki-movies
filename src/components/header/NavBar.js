@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
 import CottageIcon from "@mui/icons-material/Cottage";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import TvIcon from "@mui/icons-material/Tv";

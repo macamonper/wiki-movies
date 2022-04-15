@@ -14,7 +14,7 @@ const useFetchCategory = (type, categoryContent, page) => {
         setCategories(data.results);
         setTotalPages(data.total_pages);
       });
-  }, [categoryContent, page]);
+  }, [type,categoryContent, page]);
 
   return {
     content: category,

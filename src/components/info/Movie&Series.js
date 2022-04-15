@@ -119,6 +119,7 @@ const MovieAndSeries = ({ info }) => {
                       href={info.homepage}
                       target="_blank"
                       className="homepageLink"
+                      rel="noreferrer"
                     >
                       Check it out here!
                     </a>

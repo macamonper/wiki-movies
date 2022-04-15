@@ -8,7 +8,8 @@ import useFetchTrending from "../../hooks/useFetchTrending";
 import { selectImage } from "../../auxiliars/functions";
 
 const Carrousel = ({ type }) => {
-  const content = useFetchTrending(type, page);
+  const page = "1"
+  const content = useFetchTrending(type,page);
 
   return (
     <div>

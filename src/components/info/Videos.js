@@ -16,7 +16,7 @@ const Videos = () => {
       .then((data) => {
         setVideos(data.results);
       });
-  }, [params.id]);
+  }, [params.id,params.type]);
   return (
     <Box
       sx={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}
