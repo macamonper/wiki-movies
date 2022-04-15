@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/macamonper/wiki-movies">
+  <a href="https://wikimoviesandseries.netlify.app/">
     <img src="wiki-movies/images/logoWikiMovies.ico" alt="Logo" width="80" height="80">
   </a>
 
