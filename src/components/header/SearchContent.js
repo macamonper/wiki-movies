@@ -1,7 +1,8 @@
 import MediaContent from "../movies&series/MediaContent";
 import { urlBase, apiKey } from "../../auxiliars/variables";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Error404 from "../404/Error404";
 
 const SearchContent = () => {
   const params = useParams();
@@ -21,16 +22,22 @@ const SearchContent = () => {
         setContent(data.results);
         setTotalPages(data.total_pages);
       });
-  }, [page,params.value]);
+  }, [page]);
 
   return (
-    <MediaContent
-      title={`Search: ${params.value}`}
-      content={content}
-      count={totalPages > 500 ? 500 : totalPages}
-      page={page}
-      changePage={handleChangePage}
-    />
+    <React.Fragment>
+      {content.length === 0 ? (
+        <Error404 />
+      ) : (
+        <MediaContent
+          title={`Search: ${params.value}`}
+          content={content}
+          count={totalPages > 500 ? 500 : totalPages}
+          page={page}
+          changePage={handleChangePage}
+        />
+      )}
+    </React.Fragment>
   );
 };
 

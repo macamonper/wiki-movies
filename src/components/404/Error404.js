@@ -1,11 +1,9 @@
-import { Container, Paper, Box, Typography } from "@mui/material";
+import {Paper, Box, Typography } from "@mui/material";
 
 const Error404 = () => {
   return (
     <Paper variant="outlined" square sx={{ backgroundColor: "#131315", pb: 6 }}>
-      <Container
-        maxWidth="xl"
-        sx={{
+     <Box sx={{ height: '70vh',
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -15,7 +13,6 @@ const Error404 = () => {
         <Box>
           <Typography
             variant="p"
-            fontSize={20}
             color={"#EDEDF4"}
             align="center"
             sx={{
@@ -27,8 +24,7 @@ const Error404 = () => {
           </Typography>
 
           <Typography
-            variant="h1"
-            fontSize={250}
+            variant="h2"
             color={"error.main"}
             align="center"
           >
@@ -37,7 +33,6 @@ const Error404 = () => {
 
           <Typography
             variant="p"
-            fontSize={20}
             color={"#EDEDF4"}
             align="center"
             sx={{
@@ -49,7 +44,6 @@ const Error404 = () => {
 
           <Typography
             variant="p"
-            fontSize={20}
             color={"#EDEDF4"}
             align="center"
             sx={{
@@ -60,7 +54,7 @@ const Error404 = () => {
             Search for another thing.
           </Typography>
         </Box>
-      </Container>
+      </Box>
     </Paper>
   );
 };
