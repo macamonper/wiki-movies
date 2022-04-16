@@ -24,13 +24,14 @@ const PersonInfo = ({ info }) => {
           {params.menu === "info" && (
             <React.Fragment>
               <Container
+                className="containerInfoPerson"
                 sx={{
                   display: "flex",
                   alignItems: "flex-start",
                   flexWrap: "wrap",
                 }}
               >
-                <Box sx={{ width: "30%" }}>
+                <Box className="cardMediaPerson" sx={{ width: "30%" }}>
                   <CardMedia
                     component="img"
                     alt={`poster of ${info.name}`}
@@ -38,43 +39,23 @@ const PersonInfo = ({ info }) => {
                   />
                 </Box>
 
-                <Box sx={{ pl: "5em", width: "70%" }}>
-                  <Typography
-                    variant="h4"
-                    color={"#FFFFFF"}
-                    fontSize={30}
-                    py={2}
-                  >
+                <Box className ="infoPersonBox" sx={{ pl: "5em", width: "70%" }}>
+                  <Typography variant="h4" color={"#FFFFFF"} py={2}>
                     {info.name}
                   </Typography>
 
                   <Stars value={`${info.popularity}`}></Stars>
 
-                  <Typography
-                    variant="h5"
-                    color={"#F5F3F4"}
-                    fontSize={20}
-                    py={1}
-                  >
+                  <Typography variant="h5" color={"#F5F3F4"} py={1}>
                     {info.biography}
                   </Typography>
 
-                  <Typography
-                    variant="h5"
-                    color={"#F5F3F4"}
-                    fontSize={20}
-                    py={1}
-                  >
+                  <Typography variant="h5" color={"#F5F3F4"} py={1}>
                     Birthday: {info.birthday}
                   </Typography>
 
                   {info.death_day && (
-                    <Typography
-                      variant="h5"
-                      color={"#F5F3F4"}
-                      fontSize={20}
-                      py={1}
-                    >
+                    <Typography variant="h5" color={"#F5F3F4"} py={1}>
                       Death Day: {info.death_day}
                     </Typography>
                   )}
