@@ -37,7 +37,7 @@ const Carrousel = ({ type }) => {
         className="mySwiper"
       >
         {content.content.slice(0, 10).map((media) => (
-          <SwiperSlide key={media.id}>
+          <SwiperSlide key={media.id}> 
             <CarrouselCard
               title={media.title}
               name={media.name}

@@ -34,7 +34,7 @@ const MediaContent = ({ title, content, count, page, changePage }) => {
             </Typography>
           )}
         </Box>
-        <Box
+        <Box className="cardContainer"
           sx={{
             display: "flex",
             flexWrap: "wrap",

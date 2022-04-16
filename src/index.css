@@ -44,3 +44,27 @@ a {
 .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
   background-color: #bd1e1e !important;
 }
+
+@media (min-width:320px) and (max-width:460px) {
+  .carrouselCard{
+    width:5em !important;
+  }
+  .cardContainer{
+  justify-content: space-evenly !important
+
+  }
+  .mediaCard{
+    height: 8em !important
+  }
+  .cardContent {
+    height: auto !important;
+    padding:0px !important
+  }
+  .posterMedia{
+    height: 20em !important;
+  }
+  .containerInfo{
+    align-items:center !important
+
+  }
+}
