@@ -39,7 +39,7 @@ const PersonInfo = ({ info }) => {
                   />
                 </Box>
 
-                <Box className ="infoPersonBox" sx={{ pl: "5em", width: "70%" }}>
+                <Box className="infoPersonBox" sx={{ pl: "5em", width: "70%" }}>
                   <Typography variant="h4" color={"#FFFFFF"} py={2}>
                     {info.name}
                   </Typography>
