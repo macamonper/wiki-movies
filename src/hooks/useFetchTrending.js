@@ -14,7 +14,7 @@ const useFetchTrending = (type, page) => {
         setContent(data.results);
         setTotalPages(data.total_pages);
       });
-  }, [type,page]);
+  }, [type, page]);
   return {
     content: content,
     totalPages: totalPages,

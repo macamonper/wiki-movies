@@ -1,9 +1,11 @@
-import {Paper, Box, Typography } from "@mui/material";
+import { Paper, Box, Typography } from "@mui/material";
 
 const Error404 = () => {
   return (
     <Paper variant="outlined" square sx={{ backgroundColor: "#131315", pb: 6 }}>
-     <Box sx={{ height: '70vh',
+      <Box
+        sx={{
+          height: "70vh",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -23,11 +25,7 @@ const Error404 = () => {
             Yep, You win. I've never seen that...
           </Typography>
 
-          <Typography
-            variant="h2"
-            color={"error.main"}
-            align="center"
-          >
+          <Typography variant="h2" color={"error.main"} align="center">
             404
           </Typography>
 

@@ -12,7 +12,7 @@ const useFetchInfo = () => {
     )
       .then((res) => res.json())
       .then((data) => setInfo(data));
-  }, [params.id,params.type]);
+  }, [params.id, params.type]);
 
   return info;
 };

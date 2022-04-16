@@ -17,7 +17,7 @@ const Cast = () => {
       .then((data) => {
         setCast(data.cast);
       });
-  }, [params.id,params.type]);
+  }, [params.id, params.type]);
 
   return (
     <Box

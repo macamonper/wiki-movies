@@ -9,7 +9,7 @@ import CarrouselCard from "../Card/CarrouselCard";
 import notAvailable from "../../images/notAvailable.svg";
 
 const CategoryCarrousel = ({ type, category }) => {
-  const page = "1"
+  const page = "1";
   const content = useFetchCategory(type, category, page);
 
   return (

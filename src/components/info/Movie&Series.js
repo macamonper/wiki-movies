@@ -19,7 +19,7 @@ const MovieAndSeries = ({ info }) => {
   return (
     <React.Fragment>
       <Box sx={{ height: "500px", p: "0px" }} className="posterMedia">
-        <CardMedia 
+        <CardMedia
           component="img"
           alt={`poster of ${info.title}`}
           height="100%"
@@ -35,7 +35,8 @@ const MovieAndSeries = ({ info }) => {
         >
           {params.menu === "info" && (
             <React.Fragment>
-              <Container className="containerInfo"
+              <Container
+                className="containerInfo"
                 sx={{
                   display: "flex",
                   alignItems: "flex-start",

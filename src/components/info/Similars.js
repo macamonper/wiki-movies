@@ -17,7 +17,7 @@ const Similars = () => {
       .then((data) => {
         setSimilars(data.results);
       });
-  }, [params.id,params.type]);
+  }, [params.id, params.type]);
 
   return (
     <Box

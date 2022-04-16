@@ -8,8 +8,8 @@ import useFetchTrending from "../../hooks/useFetchTrending";
 import { selectImage } from "../../auxiliars/functions";
 
 const Carrousel = ({ type }) => {
-  const page = "1"
-  const content = useFetchTrending(type,page);
+  const page = "1";
+  const content = useFetchTrending(type, page);
 
   return (
     <div>
@@ -37,7 +37,7 @@ const Carrousel = ({ type }) => {
         className="mySwiper"
       >
         {content.content.slice(0, 10).map((media) => (
-          <SwiperSlide key={media.id}> 
+          <SwiperSlide key={media.id}>
             <CarrouselCard
               title={media.title}
               name={media.name}
