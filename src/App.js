@@ -76,7 +76,7 @@ theme = createTheme(theme, {
       },
     },
     button: {
-      fontSize: "0.3rem",
+      fontSize: "2rem",
       textAlign: "left",
       "@media (min-width:600px)": {
         fontSize: "1.3rem",

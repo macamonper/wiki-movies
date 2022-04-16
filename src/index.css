@@ -38,7 +38,7 @@ a {
 }
 
 .MuiPaginationItem-root {
-  color: #ffff !important;
+  color: #ffffff !important;
 }
 
 .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
@@ -50,7 +50,8 @@ a {
     width:5em !important;
   }
   .cardContainer{
-  justify-content: space-evenly !important
+  justify-content: space-around !important;
+  
 
   }
   .mediaCard{
@@ -66,5 +67,16 @@ a {
   .containerInfo{
     align-items:center !important
 
+  }
+  .containerInfoPerson{
+    flex-direction: column !important;
+    align-items: center !important  }
+  .cardMediaPerson{
+    width:60% !important;
+  }
+  .infoPersonBox{
+    width: 100% !important;
+    padding-left: 0px !important;
+    text-align: center !important;
   }
 }
