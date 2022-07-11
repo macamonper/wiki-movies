@@ -1,5 +1,6 @@
 import notAvailable from "../images/notAvailable.svg";
 
+// excelente !
 export const currencyFormat = (num) => {
   return "$" + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
 };
